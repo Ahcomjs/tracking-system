@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql" 
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String           @id @default(uuid())
+  email           String           @unique
+  name            String?
+  password        String 
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  trackingHistory TrackingHistory[]
+  savedTrackings  SavedTracking[]
+}
+
+model TrackingHistory {
+  id            String   @id @default(uuid())
+  trackingNumber String
+  carrier       String
+  status        String
+  location      String?
+  timestamp     DateTime @default(now())
+  description   String?
+  userId        String? 
+  user          User?    @relation(fields: [userId], references: [id])
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([trackingNumber]) 
+  @@index([userId])
+}
+
+model SavedTracking {
+  id            String   @id @default(uuid())
+  trackingNumber String
+  carrier       String
+  alias         String?
+  userId        String
+  user          User     @relation(fields: [userId], references: [id])
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([userId, trackingNumber]) 
+  @@index([userId]) 
+}
