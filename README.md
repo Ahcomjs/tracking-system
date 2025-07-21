@@ -8,15 +8,6 @@
 A full-stack application built with Next.js 14 App Router, Prisma, and PostgreSQL, designed to unify shipment tracking data from major US carriers into a single interface.
 </p>
 
-<p align="center">
-  <a href="{here the link}" target="_blank">
-    <img src="https://img.shields.io/badge/Live_Demo-View_Here-blue?style=for-the-badge&logo=vercel" alt="Live Demo">
-  </a>
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" alt="Project Status">
-</p>
-
----
-
 
 ## 1. 🚧 Project Overview & Architecture
 
