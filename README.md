@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/484aac42-a787-4d8d-8ee2-6c2e7d08b6e0" alt="Gradient Generator Logo" width="150">
 </p>
 
-<h1 align="center">🚚 Universal Shipping Tracker</h1>
+<h1 align="center">Universal Shipping Tracker</h1>
 
 <p align="center">
 A full-stack application built with Next.js 14 App Router, Prisma, and PostgreSQL, designed to unify shipment tracking data from major US carriers into a single interface.
